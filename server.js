@@ -22,6 +22,19 @@ app.get("/api/notes", function (req, res) {
   });
 });
 
+app.delete("/api/notes/:id", (req, res) => {
+  const deleteNote = req.params.id;
+  fs.readFile(jsonPath, "utf-8", (err, data) => {
+    const allNotes = JSON.parse(data);
+    const newNotes = allNotes.filter((note) => note.id !== deleteNote);
+
+    // Write all notes back to db.json
+    fs.writeFile(jsonPath, JSON.stringify(newNotes), () => {
+      res.end();
+    });
+  });
+});
+
 app.post("/api/notes", function (req, res) {
   const newNote = {
     id: uuidv4(),
