@@ -14,3 +14,6 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 ## Deployed Application
 [Notetaker](https://note-taker-judno.herokuapp.com/notes)
+
+## Screenshot
+<img width="547" alt="NOTETAKER" src="https://user-images.githubusercontent.com/69154965/108615997-7219b500-745d-11eb-80bc-e5a5ef2a286c.png">
