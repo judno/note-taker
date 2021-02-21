@@ -58,4 +58,4 @@ app.get("*", function (req, res) {
   res.sendFile(indexHtmlPath);
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
